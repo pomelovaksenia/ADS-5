@@ -24,7 +24,7 @@ int Prior(char c) {
 
 std::string infx2pstfx(std::string inf) {
   TStack<char, 100> stck1;
-  std::string itog;
+  std::string itogo;
   int res = 0;
   for (char a : inf) {
     bool iter = true;
@@ -61,7 +61,7 @@ std::string infx2pstfx(std::string inf) {
     }
     if (res == inf.size() - 1) {
       while (!stck1.empty()) {
-        itog += stck1.pop();
+        itogo += stck1.pop();
         if (stck1.pri() != -1) itogo += ' ';
       }
     }
