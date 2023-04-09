@@ -10,7 +10,7 @@ class TStack {
   int a;
 
  public:
-  TStack() {a = -1;}
+  TStack() { a = -1; }
   void push(const T& value) {
     if (full()) {
       throw std::string("Empty!");
@@ -19,11 +19,11 @@ class TStack {
       mass[a++] = value;
     }
   }
-  T pol() const {return mass[a];}
-  T pop() {return mass[a--];}
-  int pri() const {return a;}
-  bool empty() const {return a == -1;}
-  bool full() const {return a == size;}
+  T pol() const { return mass[a]; }
+  T pop() { return mass[a--]; }
+  int pri() const { return a; }
+  bool empty() const { return a == -1; }
+  bool full() const { return a == size; }
 };
 
 #endif  // INCLUDE_TSTACK_H_
