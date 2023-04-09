@@ -5,9 +5,9 @@
 
 template <typename T, int size>
 class TStack {
-  private :
-  T mass[size] = {0};
-  int a;
+   private:
+   T mass[size] = {0};
+   int a;
 
  public:
   TStack() { a = -1; }
