@@ -5,7 +5,7 @@
 
 template <typename T, int size>
 class TStack {
-  private: 
+  private :
   T mass[size] = {0};
   int a;
 
