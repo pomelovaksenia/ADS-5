@@ -5,17 +5,17 @@
 
 template <typename T, int size>
 class TStack {
-   private:
-   T mass[size] = {0};
-   int a;
+ private:
+  T mass[size] = {0};
+  int a;
 
  public:
   TStack() { a = -1; }
   void push(const T& value) {
     if (full()) {
-      throw std::string("Empty!");
+      throw std::string("  empty!");
     } else {
-      mass[a++] = value;
+      mass[++a] = value;
     }
   }
   T pol() const { return mass[a]; }
