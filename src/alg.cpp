@@ -72,32 +72,32 @@ std::string infx2pstfx(std::string inf) {
 
 int eval(std::string pref) {
   TStack<int, 100> stck2;
-  for (char z : pref) {
-    if (z == '+') {
+  for (char k : pref) {
+    if (k == '+') {
       int i = stck2.pop();
       i = i + stck2.pop();
       stck2.push(i);
     }
-    if (z == '-') {
+    if (k == '-') {
       int i = stck2.pop();
       i = stck2.pop() - i;
       stck2.push(i);
     }
-    if (z == '/') {
+    if (k == '/') {
       int i = stck2.pop();
       i = stck2.pop() / i;
       stck2.push(i);
     }
-    if (z == '*') {
+    if (k == '*') {
       int i = stck2.pop();
       i = i * stck2.pop();
       stck2.push(i);
     }
-    if (z == ' ') {
+    if (k == ' ') {
       continue;
     }
-    if ((z - '0') > 0) {
-      int i = z - '0';
+    if ((k - '0') > 0) {
+      int i = k - '0';
       stck2.push(i);
     }
   }
