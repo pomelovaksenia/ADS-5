@@ -3,9 +3,9 @@
 #define INCLUDE_TSTACK_H_
 #include <string>
 
-template<typename T, int size>
+template <typename T, int size>
 class TStack {
-  private:
+  private: 
   T mass[size] = {0};
   int a;
 
@@ -14,8 +14,7 @@ class TStack {
   void push(const T& value) {
     if (full()) {
       throw std::string("Empty!");
-    }
-    else {
+    } else {
       mass[a++] = value;
     }
   }
